@@ -1,0 +1,49 @@
+---
+import { Image } from 'astro:assets';
+
+const features = [
+  {
+    title: "Gráficos",
+    description: "Visualiza datos en tiempo real con gráficos dinámicos."
+  },
+  {
+    title: "Informes Detallados",
+    description: "Genera y descarga informes de rendimiento de SQL."
+  },
+  {
+    title: "Gestión de Alertas",
+    description: "Monitorea y gestiona alertas críticas fácilmente."
+  }
+];
+---
+
+<section class="bg-black py-40 px-4">
+  <div class="container mx-auto max-w-4xl">
+    <h2 class="text-4xl font-bold text-center mb-4">Personalización de Monitoreo</h2>
+    <p class="text-xl text-gray-400 text-center mb-12">Ajusta tus criterios de seguimiento.</p>
+    <div class="flex flex-col md:flex-row items-center gap-12">
+      <div class="md:w-1/2">
+        {features.map((feature) => (
+          <div class="flex items-start mb-8">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-500 mr-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">{feature.title}</h3>
+              <p class="text-gray-400">{feature.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class="md:w-1/2">
+        <Image 
+          src="/mobile-mockup-screenshot.png" 
+          alt="Mobile device mockup" 
+          width={360} 
+          height={640}
+          class="rounded-3xl shadow-lg"
+        />
+      </div>
+    </div>
+  </div>
+</section>

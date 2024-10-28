@@ -1,0 +1,25 @@
+---
+import { Image } from 'astro:assets';
+---
+
+<section class="relative h-screen flex items-center justify-center py-20 px-4">
+  <Image 
+    src="/Image --lummi --people=0.png" 
+    alt="Background" 
+    width={1920} 
+    height={1080} 
+    class="absolute inset-0 w-full h-full object-cover"
+  />
+  <div class="relative z-10 bg-white text-black rounded-2xl p-8 max-w-3xl mx-auto text-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Optimiza tu rendimiento SQL</h1>
+    <p class="text-xl text-gray-600 mb-8">Monitorea y genera informes fácilmente</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <button class="bg-purple-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-purple-700 transition duration-300">
+        Comienza ahora
+      </button>
+      <button class="border border-gray-300 px-6 py-3 rounded-md font-semibold hover:bg-gray-100 transition duration-300">
+        Más Información
+      </button>
+    </div>
+  </div>
+</section>

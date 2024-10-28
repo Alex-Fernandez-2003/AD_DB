@@ -1,0 +1,50 @@
+---
+import { Image } from 'astro:assets';
+
+const features = [
+  {
+    title: "Monitoreo Eficiente",
+    heading: "Control total sobre tus datos",
+    description: "Visualiza y gestiona el rendimiento de SQL.",
+    cta: "Inicia el monitoreo",
+    image: "/feature-card-illustration-1.png"
+  },
+  {
+    title: "Alertas en tiempo real",
+    heading: "Recibe notificaciones instantáneas",
+    description: "Mantente informado sobre el estado de tu SQL.",
+    cta: "Configura tus alertas",
+    image: "/feature-card-illustration-2.png"
+  }
+];
+---
+
+<section class="bg-black py-20 px-4">
+  <div class="container mx-auto">
+    <h2 class="text-4xl md:text-5xl font-bold text-center mb-4">Visión general del rendimiento</h2>
+    <p class="text-xl text-gray-400 text-center mb-12">Analiza métricas clave de SQL fácilmente.</p>
+    <div class="grid md:grid-cols-2 gap-8">
+      {features.map((feature) => (
+        <div class="bg-gray-900 rounded-xl overflow-hidden flex flex-col md:flex-row">
+          <div class="p-8 flex flex-col justify-between md:w-1/2">
+            <div>
+              <h3 class="text-purple-500 text-lg mb-2">{feature.title}</h3>
+              <h4 class="text-2xl font-bold mb-4">{feature.heading}</h4>
+              <p class="text-gray-400 mb-6">{feature.description}</p>
+            </div>
+            <button class="bg-purple-600 text-white px-6 py-2 rounded-md self-start hover:bg-purple-700 transition duration-300">
+              {feature.cta}
+            </button>
+          </div>
+          <Image 
+            src={feature.image}
+            alt={`Ilustración para ${feature.title}`}
+            width={400}
+            height={300}
+            class="object-cover h-full md:w-1/2"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

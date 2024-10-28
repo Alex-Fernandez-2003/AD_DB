@@ -1,10 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import FeatureCards from '../components/FeatureCards.astro';
+import MobileDeviceMockup from '../components/MobileDeviceMockup.astro';
+import DesktopCTA from '../components/DesktopCTA.astro';
+import FloatingBoxCTA from '../components/FloatingBoxCTA.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="XD">
-	
+<Layout title="SQL Monitor - Optimiza tu rendimiento SQL">
+  <Header />
+  <main>
+    <Hero />
+    <FeatureCards />
+    <MobileDeviceMockup />
+    <DesktopCTA />
+    <FloatingBoxCTA />
+  </main>
+  <Footer />
 </Layout>
-
-
